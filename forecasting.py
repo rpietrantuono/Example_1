@@ -46,7 +46,7 @@ def train_predict(df_all_data, df_all_train_index, seasonality_params=seasonalit
     df_test = df_all_data.copy().iloc[df_all_train_index:]
 
     #To track it on MLflow server. Need to run the server first
-    #mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
     # Useful for multiple runs (only doing one run in this sample notebook)
     with mlflow.start_run():
